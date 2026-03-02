@@ -55,15 +55,15 @@ List the key features of your project:
 ### For Software:
 
 #### Installation
-flutter pub get
+
 ```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
+flutter pub get
 ```
 
 #### Run
-flutter run,flutter build apk
+
 ```bash
-[Run commands - e.g., npm start, python app.py]
+flutter run
 ```
 
 ---
