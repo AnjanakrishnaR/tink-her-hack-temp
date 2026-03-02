@@ -2,27 +2,29 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# SafeGo
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: arcane
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Anjana Krishna R - Mar Baselios Christian College of Engineering and Technology (MBCET)
+- Member 2: Afrin Shehnas H - Mar Baselios Christian College of Engineering and Technology (MBCET)
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+SafeGo is an Outdoor Safety Evaluator mobile application that monitors environmental conditions like UV index based on the user's live location and sends real-time safety notifications. It helps users stay protected from harmful outdoor exposure.
+
 
 ### The Problem statement
-[What problem are you solving?]
+Many people step outdoors without knowing the intensity of UV radiation in their area. Prolonged exposure to high UV levels can cause skin damage, dehydration, and long-term health risks. There is a lack of simple mobile apps focused specifically on real-time outdoor safety alerts.
+
 
 ### The Solution
-[How are you solving it?]
+SafeGo automatically detects the user’s location, fetches real-time UV data using an API, evaluates safety levels, and sends alerts when conditions become unsafe. This enables users to take precautions such as applying sunscreen, wearing protective clothing, or avoiding outdoor activity during peak hours.
 
 ---
 
@@ -31,25 +33,20 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Languages used: dart
+- Frameworks used: flutter
+- Libraries used: http,geolocator,flutter_local_notifications 
+- Tools used: Android Studio / VS Code,Flutter SDK,Git
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
 
----
 
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+- Feature 1: Real-time GPS location tracking  
+- Feature 2: UV Index monitoring  
+- Feature 3: Smart safety notifications  
+- Feature 4: Risk level evaluation system 
 
 ---
 
@@ -58,22 +55,16 @@ List the key features of your project:
 ### For Software:
 
 #### Installation
+flutter pub get
 ```bash
 [Installation commands - e.g., npm install, pip install -r requirements.txt]
 ```
 
 #### Run
+flutter run,flutter build apk
 ```bash
 [Run commands - e.g., npm start, python app.py]
 ```
-
-### For Hardware:
-
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
 
 ---
 
@@ -95,92 +86,44 @@ List the key features of your project:
 #### Diagrams
 
 **System Architecture:**
+Flutter App
+→ Geolocator (Fetch Location)
+→ HTTP API Call (Fetch UV Data)
+→ Risk Evaluation Logic
+→ Local Notification Trigger
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
 
 **Application Workflow:**
+User opens SafeGo
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+App requests location permission
 
----
+GPS coordinates are fetched
 
-### For Hardware:
+UV data is retrieved using API
 
-#### Schematic & Circuit
+Risk level is calculated
 
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
+If UV is high → Notification is triggered
 
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
+User is alerted and can take precautions
 
-#### Build Photos
-
-![Team](Add photo of your team here)
-
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
----
 
 ## Additional Documentation
 
-### For Web Projects with Backend:
 
-#### API Documentation
-
-**Base URL:** `https://api.yourproject.com`
-
-##### Endpoints
-
-**GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
-
-**POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
-```json
-{
-  "field1": "value1",
-  "field2": "value2"
-}
-```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
----
 
 ### For Mobile Apps:
 
 #### App Flow Diagram
+1. User opens the SafeGo app  
+2. App requests location permission  
+3. GPS coordinates are fetched using Geolocator  
+4. UV index data is fetched from weather API  
+5. App evaluates risk level (Low / Moderate / High / Extreme)  
+6. If UV level is high → Local notification alert is triggered  
+7. User receives warning and safety suggestion  
 
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
 
 #### Installation Guide
 
@@ -374,12 +317,11 @@ python script.py -v --format json data.json
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
-
+**Tool Used:** chatgpt,claude
 **Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+- chatgpt: archietecture
+- claude: Debugging assistance,Code review and optimization suggestions
+  
 
 **Key Prompts Used:**
 - "Create a REST API endpoint for user authentication"
